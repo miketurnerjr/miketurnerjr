@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ff0a32ca9b6b7e96d060e92f725d57c4",
+    "content-hash": "ee06135d8e67bd936d754b8defefe4d2",
     "packages": [
         {
             "name": "artesaos/seotools",
@@ -3398,6 +3398,61 @@
                 "translate"
             ],
             "time": "2019-09-04T07:42:04+00:00"
+        },
+        {
+            "name": "spatie/laravel-view-components",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spatie/laravel-view-components.git",
+                "reference": "ed4933e52541e1c7484ef4038a835bd147e08ffb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spatie/laravel-view-components/zipball/ed4933e52541e1c7484ef4038a835bd147e08ffb",
+                "reference": "ed4933e52541e1c7484ef4038a835bd147e08ffb",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "5.6.*|5.7.*|5.8.*|^6.0",
+                "php": "^7.1"
+            },
+            "require-dev": {
+                "orchestra/testbench": "3.6.*|3.7.*|3.8.*|^4.0",
+                "phpunit/phpunit": "^7.0|^8.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Spatie\\ViewComponents\\ViewComponentsServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Spatie\\ViewComponents\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sebastian De Deyne",
+                    "email": "sebastian@spatie.be",
+                    "homepage": "https://spatie.be",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A better way to connect data with view rendering in Laravel",
+            "homepage": "https://github.com/spatie/laravel-view-components",
+            "keywords": [
+                "laravel-view-components",
+                "spatie"
+            ],
+            "time": "2019-09-03T17:42:00+00:00"
         },
         {
             "name": "spatie/macroable",
