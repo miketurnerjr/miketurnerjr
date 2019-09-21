@@ -227,6 +227,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
 
         'SEO' => Artesaos\SEOTools\Facades\SEOTools::class,
+        'Debugbar' => Barryvdh\Debugbar\Facade::class,
 
     ],
 
