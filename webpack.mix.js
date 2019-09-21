@@ -12,4 +12,7 @@ const mix = require('laravel-mix');
  */
 
 mix.js('resources/js/app.js', 'public/js')
-    .sass('resources/sass/app.scss', 'public/css');
+    .js('resources/admin/js/admin.js', 'public/js')
+    .sass('resources/sass/app.scss', 'public/css')
+    .sass('resources/admin/js/admin.scss', 'public/css')
+    .browserSync('https://miketurnerjr.dev');
