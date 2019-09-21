@@ -166,6 +166,8 @@ return [
          * Package Service Providers...
          */
         Spatie\Permission\PermissionServiceProvider::class,
+        Spatie\Tags\TagsServiceProvider::class,
+        Spatie\Menu\Laravel\MenuServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -229,6 +231,7 @@ return [
 
         'SEO' => Artesaos\SEOTools\Facades\SEOTools::class,
         'Debugbar' => Barryvdh\Debugbar\Facade::class,
+        'Menu' => Spatie\Menu\Laravel\Facades\Menu::class,
 
     ],
 
