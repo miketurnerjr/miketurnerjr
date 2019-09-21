@@ -19,6 +19,7 @@
         "spatie/laravel-menu": "^3.4",
         "spatie/laravel-permission": "^3.0",
         "spatie/laravel-searchable": "^1.4",
+        "spatie/laravel-sitemap": "^5.4",
         "spatie/laravel-tags": "^2.5"
     },
     "require-dev": {
