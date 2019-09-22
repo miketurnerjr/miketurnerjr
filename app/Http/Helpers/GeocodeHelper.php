@@ -4,12 +4,6 @@ namespace App\Http\Helpers;
 
 class Geocode {
 
-    protected $key = config('google.apiKey');
-
-    protected $byAddressurl = config('google.byAddressUrl');
-
-    protected $byZipCodeUrl = config('google.yZipCodeUrl');
-
     public static function coordsByAddress($address, $displayMessage = false) 
     {
         if( is_array($address) ) {
@@ -19,10 +13,10 @@ class Geocode {
         $options = [
             'address' => urlencode($address),
             'sensor' => 'false',
-            'key' => $this->key
+            'key' => config('google.apiKey')
         ];
 
-        $url = $this->byAddressurl . http_build_query([
+        $url = config('google.byAddressUrl') . http_build_query([
             $options
         ]);
 
@@ -84,11 +78,11 @@ class Geocode {
         $options = [
             'address' => rawurlencode($zipCode),
             'sensor' => 'false',
-            'key' => $this->key,
+            'key' => $config('google.apiKey'),
             'components' => 'postal_code'
         ];
 
-        $url = $this->byZipCodeUrl . http_build_query([
+        $url = config('google.byZipCodeUrl') . http_build_query([
             $options
         ]);
 
