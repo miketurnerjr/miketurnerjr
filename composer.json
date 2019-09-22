@@ -51,7 +51,13 @@
         "classmap": [
             "database/seeds",
             "database/factories"
+        ],
+        "files":[
+            "app/Http/Helpers/PHPHelper.php",
+            "app/Http/Helpers/States.php",
+            "app/Http/Helpers/GeocodeHelper.php"
         ]
+
     },
     "autoload-dev": {
         "psr-4": {
