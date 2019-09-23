@@ -12,14 +12,23 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    @section('js')
+        <script src="{{ asset('js/app.js') }}" defer></script>
+
+        @stack('scripts')
+    @stop
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    @section('css')
+        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+        @stack('css')
+    @stop
+    
 </head>
 
 <body>
