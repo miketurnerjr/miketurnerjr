@@ -8,5 +8,7 @@ return [
 
     'byAddressUrl' => 'https://maps.googleapis.com/maps/api/geocode/json',
 
-    'yZipCodeUrl' => 'https://maps.googleapis.com/maps/api/geocode/xml'
+    'yZipCodeUrl' => 'https://maps.googleapis.com/maps/api/geocode/xml',
+
+    'google-site-verification' => 'LP8yrAfBTQed4K7cW2RyvAL29uulE_zhdXf1IX8K5vk'
 ];
