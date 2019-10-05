@@ -14,5 +14,6 @@ yarn-error.log
 .DS_Store
 /storage/debuger
 /storage/logs
+/storage/.DS_Store
 /public/
 

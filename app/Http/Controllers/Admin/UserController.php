@@ -46,9 +46,9 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($id=null)
     {
-        //
+
     }
 
     /**
@@ -59,7 +59,13 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        //
+      if(is_null($id)) {
+        $user = User::find($id);
+      } else {
+        $user = User::find(auth()->user()->id);
+      }
+
+      dd($user);
     }
 
     /**
@@ -84,4 +90,10 @@ class UserController extends Controller
     {
         //
     }
+
+    public function profile()
+    {
+
+    }
+
 }

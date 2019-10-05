@@ -1,5 +1,17 @@
 <?php
 
+if(! function_exists('print_f')) {
+    function print_f($data, $exit = false) {
+        echo '<pre>';
+        print_r($data);
+        echo '<pre>';
+        
+        if($exit == true) {
+            exit();
+        }
+    }
+}
+
 /**
  * Custom functions
  */

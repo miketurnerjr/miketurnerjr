@@ -52,10 +52,6 @@ function convertToSlug(Text) {
 
 
 
-
-
-
-
 function init() {
     confirmDelete();
     showPassword();

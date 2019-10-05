@@ -11,15 +11,36 @@
 |
 */
 
-Route::group([
-    'prefix' => 'admin',
-    'namespace' => 'Admin'
-], function () {
-    Route::get('/', 'DashboardController@index')->name('admin.dashboard.index');
+// Route::group([
+//     'prefix' => 'admin',
+//     'namespace' => 'Admin'
+// ], function () {
+//     Route::get('/', 'DashboardController@index')->name('admin.dashboard.index');
 
-    Route::resource('users', 'UserController', [
-      'names' => [
-        'index' => 'admin.users.index'
-      ]
-    ]);
+//     Route::resource('users', 'UserController', [
+//       'names' => [
+//         'index' => 'admin.users.index',
+//         'edit' => 'admin.users.edit'
+//       ]
+//     ]);
+
+    
+// });
+
+Route::group([
+  'namespace' => 'Admin',
+  'prefix' => 'admin'
+], function() {
+  Route::get('/', 'DashboardController@index')->name('admin.dashboard.index');
+});
+
+Route::group([
+  'namespace' => 'Admin',
+  'as' => 'admin.',
+  'prefix' => 'admin'
+], function() {
+  Route::resource('users', 'UserController');
+  Route::get('/profile', 'UserController@profile')->name('profile');
+  Route::resource('messages', 'MessageController');
+  Route::resource('notifications', 'NotificationController');
 });

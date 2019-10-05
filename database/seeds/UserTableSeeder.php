@@ -19,7 +19,8 @@ class UserTableSeeder extends Seeder
             'password' => bcrypt('password'),
             'created_at' => now(),
             'updated_at' => now(),
-            'email_verified_at' => now()
+            'email_verified_at' => now(),
+            'avatar' => 'me.jpg'
         ]);
     }
 }
