@@ -64,6 +64,8 @@
     </div>
     <!-- Top Bar End -->
 
+    {!! Widget::adminSideBarNavigation() !!}
+
     </div>
 
 </body>

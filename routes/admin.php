@@ -24,6 +24,10 @@ Route::group([
   'prefix' => 'admin'
 ], function() {
   Route::resource('users', 'UserController');
+  Route::resource('blog', 'BlogController');
+  Route::resource('work', 'PortfolioController');
+  Route::resource('code', 'SnippetController');
+  Route::resource('code-categories', 'SnippetCategoryController');
   Route::get('/profile', 'UserController@profile')->name('profile');
   Route::resource('messages', 'MessageController');
   Route::resource('notifications', 'NotificationController');

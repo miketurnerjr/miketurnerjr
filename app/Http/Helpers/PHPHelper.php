@@ -122,6 +122,18 @@ if(!function_exists('datetimeNow'))
 	}
 }
 
+if(!function_exists('array_to_object'))
+{	
+	function array_to_object($arr)
+	{
+		if(!is_array($arr))
+			return $arr;
+			
+		return (object) array_map(__FUNCTION__, $arr);
+	}
+}
+
+
 
 
 

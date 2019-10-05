@@ -15,7 +15,6 @@ class CreateMessagesTable extends Migration
     {
         Schema::create('messages', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->boolean('incoming')->default(false);
             $table->string('first_name', 32);
             $table->string('last_name', 32);
             $table->string('email', 64)->index();
@@ -25,6 +24,8 @@ class CreateMessagesTable extends Migration
             $table->string('preview', 32)->nullable()->default(false)->comment('code will strip a blurb out and store it here');
             $table->longText('comment');
             $table->unsignedInteger('message_id')->nullable()->default(false)->comment('if replying to existing message, this will be the id');
+            $table->boolean('has_read')->default(false)->index();
+            $table->string('ip_address')->nullable()->default(null)->index();
             $table->timestamps();
             $table->softDeletes();
         });
