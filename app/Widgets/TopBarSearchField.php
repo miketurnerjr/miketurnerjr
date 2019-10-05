@@ -11,7 +11,12 @@ class TopBarSearchField extends AbstractWidget
      *
      * @var array
      */
-    protected $config = [];
+    protected $config = [
+        'method' => 'GET',
+        'formName' => 'search',
+        'formId' => 'search',
+        'formPlaceholder' => 'Search...'
+    ];
 
     /**
      * Treat this method as a controller action.
