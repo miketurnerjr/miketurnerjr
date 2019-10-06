@@ -19,14 +19,18 @@ class MediaLibraryController extends Controller
     public function index()
     {
         $pageTitle = 'Media Library';
-
+        
+        $breadcrumbs = [
+            [
+                'route' => route('admin.media-library.index'),
+                'name' => 'Media Library',
+                'active' => true
+            ]
+        ];
 
         $images = MediaLibrary::get();
 
-
-
-
-        return view('admin.media_library.index', compact(['images', 'pageTitle']));
+        return view('admin.media_library.index', compact(['images', 'pageTitle', 'breadcrumbs']));
     }
 
     /**

@@ -25,6 +25,7 @@
     },
     "dependencies": {
         "browser-sync": "^2.26.7",
-        "browser-sync-webpack-plugin": "^2.2.2"
+        "browser-sync-webpack-plugin": "^2.2.2",
+        "dropify": "^0.2.2"
     }
 }

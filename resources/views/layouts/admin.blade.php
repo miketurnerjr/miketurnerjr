@@ -82,6 +82,20 @@
 
                             <ol class="breadcrumb float-right">
                                 <li class="breadcrumb-item"><a href="{!! route('admin.dashboard.index') !!}">Dashboard</a></li>
+                                @if(isset($breadcrumbs))
+                                    @foreach($breadcrumbs as $crumb)
+                                        @if($crumb['active'] == true)
+                                            <li class="breadcrumb-item active">{!! $crumb['name'] !!}</li>
+                                        @else
+                                            <li class="breadcrumb-item">
+                                                <a href="{!! $crumb['route'] !!}">
+                                                    {!! $crumb['name'] !!}
+                                                </a>
+                                            </li>
+                                        @endif
+
+                                    @endforeach
+                                @endif
                             </ol>
 
                             <div class="clearfix"></div>
@@ -90,10 +104,8 @@
                 </div>
                 <!-- End Row -->
 
-                <div class="row">
-                    @section('content')
-                    @stop    
-                </div>
+                @yield('content')
+
                 
             </div>
         </div>
