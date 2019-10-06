@@ -18,10 +18,15 @@ class MediaLibraryController extends Controller
      */
     public function index()
     {
+        $pageTitle = 'Media Library';
+
+
         $images = MediaLibrary::get();
 
 
-        return view('admin.media_library.index', compact('images'));
+
+
+        return view('admin.media_library.index', compact(['images', 'pageTitle']));
     }
 
     /**

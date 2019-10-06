@@ -73,6 +73,13 @@
                             </li>
 
                             <li class="has_sub">
+                                <a href="{!! route('admin.media-library.index') !!}" class="waves-effect">
+                                    <i class="fas fa-share-alt"></i>
+                                    <span> Media Library </span>
+                                </a>
+                            </li>
+
+                            <li class="has_sub">
                                 <a href="javascript:void(0);" class="waves-effect">
                                     <i class="fas fa-file"></i>
                                     <span> Static Content </span> 
