@@ -66,7 +66,43 @@
 
     {!! Widget::adminSideBarNavigation() !!}
 
+    <div class="content-page">
+        <div class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="page-title-box">
+                            <h4 class="page-title float-left">
+                                @if(isset($pageTitle))
+                                    {!! $pageTitle !!}
+                                @else
+                                    {!! config('app.name') !!}
+                                @endif
+                            </h4>
+
+                            <ol class="breadcrumb float-right">
+                                <li class="breadcrumb-item"><a href="{!! route('admin.dashboard.index') !!}">Dashboard</a></li>
+                            </ol>
+
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Row -->
+
+                <div class="row">
+                    @section('content')
+                    @stop    
+                </div>
+                
+            </div>
+        </div>
     </div>
+
+    <footer class="footer">Footer Text</footer>
+
+</div>
+
 
 
 
