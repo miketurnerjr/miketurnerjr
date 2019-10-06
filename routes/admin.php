@@ -35,6 +35,7 @@ Route::group([
     ]
   ]);
   Route::resource('clients', 'ClientController');
+  Route::Resource('media-library', 'MediaLibraryController');
 
   Route::get('/profile', 'UserController@profile')->name('profile');
   Route::get('/update-password', 'UserCOntroller@getUpdatePassword')->name('update-password');
