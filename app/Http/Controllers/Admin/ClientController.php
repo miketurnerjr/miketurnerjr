@@ -5,10 +5,8 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class UserController extends Controller
+class ClientController extends Controller
 {
-
-
     /**
      * Display a listing of the resource.
      *
@@ -16,7 +14,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users = User::orderBy('created_at', 'desc')->get();
+        //
     }
 
     /**
@@ -46,9 +44,9 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id=null)
+    public function show($id)
     {
-
+        //
     }
 
     /**
@@ -59,13 +57,7 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-      if(is_null($id)) {
-        $user = User::find($id);
-      } else {
-        $user = User::find(auth()->user()->id);
-      }
-
-      dd($user);
+        //
     }
 
     /**
@@ -90,18 +82,4 @@ class UserController extends Controller
     {
         //
     }
-
-    public function profile()
-    {
-
-    }
-
-    public function getUpdatePassword() {
-
-    }
-
-    public function savePassword() {
-      
-    }
-
 }

@@ -9,12 +9,15 @@
                             <li class="text-muted menu-title">Navigation</li>
 
                             <li class="has_sub">
-                                <a href="{!! route('admin.dashboard.index') !!}" class="waves-effect"><span class="badge badge-pill badge-primary float-right">1</span><i class="zmdi zmdi-view-dashboard"></i><span> Dashboard </span> </a>
+                                <a href="{!! route('admin.dashboard.index') !!}" class="waves-effect"><span class="badge badge-pill badge-primary float-right">1</span>
+                                    <i class="fas fa-tachometer-alt"></i>
+                                    <span> Dashboard </span> 
+                                </a>
                             </li>
 
                             <li class="has_sub">
                                 <a href="javascript:void(0);" class="waves-effect">
-                                    <i class="zmdi zmdi-format-underlined"></i> 
+                                    <i class="fas fa-blog"></i> 
                                     <span> Blog Entries </span> 
                                     <span class="menu-arrow"></span>
                                     <ul class="list-unstyled">
@@ -26,7 +29,7 @@
 
                             <li class="has_sub">
                                 <a href="javascript:void(0);" class="waves-effect">
-                                    <i class="zmdi zmdi-format-underlined"></i> 
+                                    <i class="fas fa-building"></i>
                                     <span> Portfolio </span> 
                                     <span class="menu-arrow"></span>
                                     <ul class="list-unstyled">
@@ -38,7 +41,7 @@
 
                             <li class="has_sub">
                                 <a href="javascript:void(0);" class="waves-effect">
-                                    <i class="zmdi zmdi-format-underlined"></i> 
+                                    <i class="fas fa-code"></i> 
                                     <span> Snippets </span> 
                                     <span class="menu-arrow"></span>
                                     <ul class="list-unstyled">
@@ -55,7 +58,7 @@
 
                             <li class="has_sub">
                                 <a href="javascript:void(0);" class="waves-effect">
-                                    <i class="zmdi zmdi-format-underlined"></i> 
+                                    <i class="fa fa-envelope"></i> 
                                     <span> Messages </span> 
                                     <span class="menu-arrow"></span>
                                     <ul class="list-unstyled">
@@ -71,35 +74,53 @@
 
                             <li class="has_sub">
                                 <a href="javascript:void(0);" class="waves-effect">
-                                    <i class="zmdi zmdi-format-underlined"></i> 
+                                    <i class="fas fa-file"></i>
                                     <span> Static Content </span> 
                                     <span class="menu-arrow"></span>
                                     <ul class="list-unstyled">
-                                        <li><a href="#">About Me</a></li>   
+                                        <li><a href="{!! route('admin.about.index') !!}">About Me</a></li>   
                                     </ul>
                                 </a>
                             </li>
 
                             <li class="has_sub">
-                                <a href="{!! route('admin.dashboard.index') !!}" class="waves-effect">
-                                    <i class="zmdi zmdi-view-dashboard"></i>
+                                <a href="{!! route('admin.social-media.index') !!}" class="waves-effect">
+                                    <i class="fas fa-share-alt"></i>
                                     <span> Social Media </span>
                                 </a>
                             </li>
 
+                            <li class="has_sub">
+                                <a href="{!! route('admin.clients.index') !!}" class="waves-effect">
+                                    <i class="fas fa-users"></i>
+                                    <span> Clients </span>
+                                    <ul class="list-unstyled">
+                                        <li><a href="{!! route('admin.clients.index') !!}">View All Clients</a></li>
+                                        <li><a href="{!! route('admin.clients.create') !!}">Add New Client</a></li>
+
+                                    </ul>
+                                </a>
+                            </li>
+
+
+
                             <li class="text-muted menu-title">More</li>
+                            
                             <li class="has_sub">
-                                <a href="javascript:void(0);" class="waves-effect">
-                                    <i class="zmdi zmdi-view-dashboard"></i>
-                                    <span> Profile </span>
+                                <a href="{!! route('admin.profile') !!}" class="waves-effect">
+                                    <i class="fas fa-user"></i>
+                                    <span> Profile </span> 
                                 </a>
                             </li>
+
                             <li class="has_sub">
-                                <a href="javascript:void(0);" class="waves-effect">
-                                    <i class="zmdi zmdi-view-dashboard"></i>
-                                    <span> Change Password </span>
+                                <a href="{!! route('admin.update-password') !!}" class="waves-effect">
+                                    <i class="fas fa-unlock-alt"></i>
+                                    <span> Update Password </span> 
                                 </a>
                             </li>
+
+
                             <li>{!! Widget::logoutButtonForm() !!}</li>
 
                         </ul>
