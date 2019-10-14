@@ -43,6 +43,7 @@ Route::group([
   Route::resource('messages', 'MessageController');
   Route::resource('notifications', 'NotificationController');
   Route::resource('search', 'SearchController', ['only' => ['index']]);
+  Route::resource('seo', 'SeoToolController');
 
   Route::group([
     'namespace' => 'Content',

@@ -109,6 +109,13 @@
                                 </a>
                             </li>
 
+                            <li class="has_sub">
+                                <a href="{!! route('admin.seo.index') !!}" class="waves-effect">
+                                    <i class="fas fa-users"></i>
+                                    <span> SEO Tools </span>
+                                </a>
+                            </li>
+
 
 
                             <li class="text-muted menu-title">More</li>
